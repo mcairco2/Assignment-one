@@ -79,4 +79,11 @@ for name, matches in results:
 
 # DESIGN MEMO (write below in a comment):
 # 1. What core operations did you use (e.g., intersections, loops)? Why?
+#   - I used set intersections to compare product tags with customer preferences. This was to ensure efficient overlap checking (0(1) average per element)
+#   - I also used loops to iterate through products and collect match counts. 
+#   - Finally, I used sorting to order recommendations by number of matches
 # 2. How might this code change if you had 1000+ products?
+#   - If I had 1000+ products this approach would still work but it could be optimized by pre-indexing tags into a dictionary, 
+#    so that I would only check relevent items
+#   - For much larger catalogs, storing products in a database with indexes would imrpove performance, and more advanced techniques like 
+#     machine learning could enhance personalization. 
